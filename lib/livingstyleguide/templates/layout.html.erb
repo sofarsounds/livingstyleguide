@@ -1,35 +1,179 @@
 <!doctype html>
 <html id="<%= id %>">
-  <head>
-    <meta charset="utf-8">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="livingstyleguide.org <%= LivingStyleGuide::VERSION %>" name="generator">
-    <title><%= ERB::Util.h(title) %></title>
-    <script>
-      <%= javascript %>
-    </script>
-    <style>
-      <%= css %>
-    </style>
-    <%= head %>
-  </head>
-  <body class="lsg">
-    <%= header %>
-    <% unless before.empty? %>
-      <section class="lsg-before">
-        <%= before %>
-      </section>
-    <% end %>
-    <article class="lsg-container">
-      <%= html %>
-    </article>
-    <% unless after.empty? %>
-      <section class="lsg-after">
-        <%= after %>
-      </section>
-    <% end %>
-    <%= footer %>
-    <%= logo %>
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <meta content="ie=edge" http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta content="livingstyleguide.org <%= LivingStyleGuide::VERSION %>" name="generator">
+        <title><%= ERB::Util.h(title) %></title>
+        <script>
+            <%= javascript %>
+        </script>
+        <style>
+            <%= css %>
+        </style>
+        <%= head %>
+    </head>
+    <body class="lsg">
+        <%= header %>
+        <% unless before.empty? %>
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="lsg-before">
+                            <%= before %>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        <% end %>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-9" role="main"> 
+                         <article class="lsg-container">
+                            <%= html %>
+                        </article>
+                    </div>
+                    <div class="col-md-3" role="complementary">
+                        <nav class="bs-docs-sidebar hidden-print hidden-sm hidden-xs affix-top">
+                            <ul class="nav bs-docs-sidenav"> 
+                                <li class="">
+                                    <a href="#download">Label</a> 
+                                </li>
+                                <li>
+                                    <a href="#whats-included">Label</a>
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="#whats-included-precompiled">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#whats-included-source">Label</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#grunt">Label</a>
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="#grunt-installing">Label</a>
+                                        </li> 
+                                        <li>
+                                            <a href="#grunt-commands">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#grunt-troubleshooting">Label</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#template">Label</a>
+                                </li>
+                                <li>
+                                    <a href="#examples">Label</a>
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="#examples-framework">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#examples-navbars">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#examples-custom">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#examples-experiments">Label</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#tools">Label</a>
+                                    <ul class="nav">
+                                        <li>
+                                            <a href="#tools-bootlint">Label</a>
+                                        </li> 
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#community">Label</a>
+                                </li>
+                                <li>
+                                    <a href="#disable-responsive">Label</a>
+                                </li>
+                                <li>
+                                    <a href="#migration">Label</a> 
+                                </li>
+                                <li>
+                                    <a href="#support">Label</a> 
+                                    <ul class="nav"> 
+                                        <li>
+                                            <a href="#support-browsers">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie8-ie9">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie8-respondjs">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie8-box-sizing">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie8-font-face">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie-compatibility-modes">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-ie10-width">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-safari-percentages">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-fixed-position-keyboards">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-browser-zooming">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-sticky-hover-mobile">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-printing">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-android-stock-browser">Label</a>
+                                        </li>
+                                        <li>
+                                            <a href="#support-validators">Label</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#third-parties">Label</a>
+                                </li>
+                                <li>
+                                    <a href="#accessibility">Label</a> 
+                                </li>
+                                <li>
+                                    <a href="#license-faqs">Label</a>
+                                </li>
+                                <li>
+                                    <a href="#translations">Label</a>
+                                </li>
+                            </ul>
+                            <a href="#top" class="back-to-top"> Back to top </a> 
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <% unless after.empty? %>
+            <section class="lsg-after">
+                <%= after %>
+            </section>
+        <% end %>
+        <%= footer %>
+        <%= logo %>
+    </body>
 </html>
