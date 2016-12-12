@@ -169,8 +169,14 @@
             </div>
         </section>
         <% unless after.empty? %>
-            <section class="lsg-after">
-                <%= after %>
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section class="lsg-after">
+                            <%= after %>
+                        </section>
+                    </div>
+                </div>
             </section>
         <% end %>
         <%= footer %>
