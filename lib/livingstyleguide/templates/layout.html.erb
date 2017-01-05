@@ -17,16 +17,34 @@
   <body class="lsg">
     <%= header %>
     <% unless before.empty? %>
-      <section class="lsg-before">
-        <%= before %>
+      <section class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <section class="lsg-before">
+              <%= before %>
+            </section>
+          </div>
+        </section>
       </section>
     <% end %>
-    <article class="lsg-container">
-      <%= html %>
-    </article>
+    <section class="container">
+      <section class="row">
+        <div class="col-md-12">
+          <article class="lsg-container">
+            <%= html %>
+          </article>
+        </div>
+      </section>
+    </section>
     <% unless after.empty? %>
-      <section class="lsg-after">
-        <%= after %>
+      <section class="container">
+        <section class="row">
+          <div class="col-md-12">
+            <section class="lsg-after">
+              <%= after %>
+            </section>
+          </div>
+        </section>
       </section>
     <% end %>
     <%= footer %>
